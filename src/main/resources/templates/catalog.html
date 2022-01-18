@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cheese World</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header>
+    <nav> CheeseWorld</nav>
+    <a href="/cheese/all">All</a>
+    <a href="/cheese/stinky">Stinky</a>
+    <a href="/cheese/french">French</a>
+    <a href="/cheese/discount">Discount</a>
+</header>
+
+<main>
+    <div class="cheese-list" style="display: flex; flex-wrap: wrap">
+        <div th:each="cheese: ${cheeses}" class="cheese">
+            <img th:src="@{/img/default.png}">
+            <p th:text="${cheese.name}"></p>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

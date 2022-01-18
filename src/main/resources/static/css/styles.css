@@ -1,0 +1,15 @@
+.cheese-list {
+    width: 80%;
+}
+.cheese {
+    border: 1px solid black;
+    height: 200px;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cheese img {
+    width: 100%;
+    object-fit: contain;
+}
